@@ -1,0 +1,1677 @@
+[
+    {
+        "id": "caf31ad42af82798",
+        "type": "tab",
+        "label": "snapshot",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5fb795b5171e3e4c",
+        "type": "tab",
+        "label": "Base64andSql",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8a812e15a3be21e2",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f60a00aaca0568d6",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": false,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": true
+    },
+    {
+        "id": "519ed97f.26f3a8",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "http://192.168.50.146",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a9ea6f4bb4e68e1c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6f31a8e94c09d7f2",
+        "type": "influxdb",
+        "hostname": "192.168.50.146",
+        "port": "8086",
+        "protocol": "http",
+        "database": "colaps",
+        "name": "Colaps",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://192.168.50.146:8087",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "55cbc7b372811f6b",
+        "type": "postgreSQLConfig",
+        "name": "Postgres",
+        "host": "192.168.50.146",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postuser",
+        "userFieldType": "str",
+        "password": "IOtSt4ckpostgresDbPw",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "f5445fcf3b06ca7a",
+        "type": "ha-mqtt-device",
+        "name": "",
+        "config": "",
+        "retain": false
+    },
+    {
+        "id": "9b13d9d21d12d9ed",
+        "type": "function",
+        "z": "caf31ad42af82798",
+        "name": "Prepare for snapshot",
+        "func": "let now = new Date();\nlet gmtPlus2Time = new Date(now.toLocaleString(\"en-US\", { timeZone: \"Europe/Berlin\" }));\nlet year = gmtPlus2Time.getFullYear();\nlet month = String(gmtPlus2Time.getMonth() + 1).padStart(2, '0');\nlet day = String(gmtPlus2Time.getDate()).padStart(2, '0');\nlet hour = String(gmtPlus2Time.getHours()).padStart(2, '0');\nlet minutes = String(gmtPlus2Time.getMinutes()).padStart(2, '0');\nlet seconds = String(gmtPlus2Time.getSeconds()).padStart(2, '0');\n\nlet formattedDate = `${year}-${month}-${day}`;\nlet timeString = `${hour}-${minutes}-${seconds}`;\n\nlet file_name_jpg = `/config/www/${formattedDate}/snapshot_${timeString}.jpg`;\n\nmsg.payload = {\n    data: {\n        filename: file_name_jpg\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 640,
+        "wires": [
+            [
+                "12ea3b136ddb964d"
+            ]
+        ]
+    },
+    {
+        "id": "12ea3b136ddb964d",
+        "type": "api-call-service",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "server": "f60a00aaca0568d6",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "camera",
+        "service": "snapshot",
+        "areaId": [
+            "colaps"
+        ],
+        "deviceId": [
+            "20ae74ef5363b2ddd4a9999c29c8abb0"
+        ],
+        "entityId": [
+            "camera.camera1"
+        ],
+        "data": "{  \t    \"filename\": \"file_name_jpg\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "first",
+        "x": 750,
+        "y": 640,
+        "wires": [
+            [
+                "153642bf64659c5c",
+                "a92a015ab8d74b43"
+            ]
+        ]
+    },
+    {
+        "id": "153642bf64659c5c",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5e1b6c814c10d43e",
+        "type": "mqtt in",
+        "z": "caf31ad42af82798",
+        "name": "DoorSensor",
+        "topic": "zigbee2mqtt/DoorSensor",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "519ed97f.26f3a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "54835caa4b003979",
+                "a22f1fd8b396d8d8"
+            ]
+        ]
+    },
+    {
+        "id": "54835caa4b003979",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c52083eee6b69f54",
+        "type": "mqtt in",
+        "z": "caf31ad42af82798",
+        "name": "MotionSensor",
+        "topic": "zigbee2mqtt/MotionSensor",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "519ed97f.26f3a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "427ccf0710dea8a1",
+                "55d078794e28ac8b",
+                "6c4f6792936b38c9",
+                "2df832381f4dbff7"
+            ]
+        ]
+    },
+    {
+        "id": "427ccf0710dea8a1",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "be1e832662eb3a3e",
+        "type": "function",
+        "z": "caf31ad42af82798",
+        "name": "Prepare for snapshot2",
+        "func": "let now = new Date();\nlet gmtPlus2Time = new Date(now.toLocaleString(\"en-US\", { timeZone: \"Europe/Berlin\" }));\nlet year = gmtPlus2Time.getFullYear();\nlet month = String(gmtPlus2Time.getMonth() + 1).padStart(2, '0');\nlet day = String(gmtPlus2Time.getDate()).padStart(2, '0');\nlet hour = String(gmtPlus2Time.getHours()).padStart(2, '0');\nlet minutes = String(gmtPlus2Time.getMinutes()).padStart(2, '0');\nlet seconds = String(gmtPlus2Time.getSeconds()).padStart(2, '0');\n\nlet formattedDate = `${year}-${month}-${day}`;\nlet timeString = `${hour}-${minutes}-${seconds}`;\n\nlet file_name_jpg = `/config/www/${formattedDate}/snapshot_${timeString}.jpg`;\n\nmsg.payload = {\n    data: {\n        filename: file_name_jpg\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 460,
+        "wires": [
+            [
+                "0cb876e6674debfb"
+            ]
+        ]
+    },
+    {
+        "id": "0cb876e6674debfb",
+        "type": "api-call-service",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "server": "f60a00aaca0568d6",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "camera",
+        "service": "snapshot",
+        "areaId": [
+            "colaps"
+        ],
+        "deviceId": [
+            "20ae74ef5363b2ddd4a9999c29c8abb0"
+        ],
+        "entityId": [
+            "camera.camera1"
+        ],
+        "data": "{\t    \"filename\": \"file_name_jpg\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "first",
+        "x": 1090,
+        "y": 460,
+        "wires": [
+            [
+                "71a9e1280b083d2b"
+            ]
+        ]
+    },
+    {
+        "id": "6c4f6792936b38c9",
+        "type": "delay",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "be1e832662eb3a3e",
+                "15520b4c97ba54ee"
+            ]
+        ]
+    },
+    {
+        "id": "71a9e1280b083d2b",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "15520b4c97ba54ee",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "55d078794e28ac8b",
+        "type": "change",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "9b13d9d21d12d9ed"
+            ]
+        ]
+    },
+    {
+        "id": "3c26e48185c89f7a",
+        "type": "influxdb out",
+        "z": "caf31ad42af82798",
+        "influxdb": "6f31a8e94c09d7f2",
+        "name": "",
+        "measurement": "sensorStates",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ns",
+        "retentionPolicyV18Flux": "",
+        "org": "HA",
+        "bucket": "zigbee2mqtt",
+        "x": 1240,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a92a015ab8d74b43",
+        "type": "change",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "global",
+                "to": "",
+                "tot": "date"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"filename\": msg.payload.data.filename\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 640,
+        "wires": [
+            [
+                "b6b92fb9f925e2b4"
+            ]
+        ]
+    },
+    {
+        "id": "b6b92fb9f925e2b4",
+        "type": "influxdb out",
+        "z": "caf31ad42af82798",
+        "influxdb": "6f31a8e94c09d7f2",
+        "name": "",
+        "measurement": "snapshotTime",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ns",
+        "retentionPolicyV18Flux": "",
+        "org": "HA",
+        "bucket": "pictures",
+        "x": 1400,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "178423e087e0bdc3",
+        "type": "influxdb out",
+        "z": "caf31ad42af82798",
+        "influxdb": "6f31a8e94c09d7f2",
+        "name": "",
+        "measurement": "sensorStates",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ns",
+        "retentionPolicyV18Flux": "",
+        "org": "HA",
+        "bucket": "zigbee2mqtt",
+        "x": 1240,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "048c16502961c64c",
+        "type": "mqtt in",
+        "z": "caf31ad42af82798",
+        "name": "DoorSensor",
+        "topic": "zigbee2mqtt/DoorSensor",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "519ed97f.26f3a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 940,
+        "wires": [
+            [
+                "f2c3d4af3cf7c110"
+            ]
+        ]
+    },
+    {
+        "id": "f2c3d4af3cf7c110",
+        "type": "change",
+        "z": "caf31ad42af82798",
+        "name": "Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"contact\": msg.payload.contact\t} ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 940,
+        "wires": [
+            [
+                "72039ec63e8aa7b1"
+            ]
+        ]
+    },
+    {
+        "id": "814161b5ed6febed",
+        "type": "function",
+        "z": "caf31ad42af82798",
+        "name": "Door State",
+        "func": "msg.topic = \"InfluxData\";\nvar timestamp = global.get('timestamp')\nvar Sensor = msg.payload.DoorIsOpen;\nif (msg.payload.contact === false) {\n    msg.payload.DoorIsOpen = 1;\n} else {}\n\nvar Sensor = msg.payload.DoorIsOpen;\nmsg.payload = {\n    \"DoorIsOpen\": Sensor,\n    \"timestamp\": timestamp\n};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 940,
+        "wires": [
+            [
+                "0eeb1f8280843b8c",
+                "edae253d13e0ea19"
+            ]
+        ]
+    },
+    {
+        "id": "0eeb1f8280843b8c",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "555e76897a6ee68b",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "72039ec63e8aa7b1",
+        "type": "switch",
+        "z": "caf31ad42af82798",
+        "name": "",
+        "property": "payload.contact",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 940,
+        "wires": [
+            [
+                "555e76897a6ee68b",
+                "814161b5ed6febed"
+            ]
+        ]
+    },
+    {
+        "id": "edae253d13e0ea19",
+        "type": "influxdb out",
+        "z": "caf31ad42af82798",
+        "influxdb": "6f31a8e94c09d7f2",
+        "name": "",
+        "measurement": "sensorStates",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ns",
+        "retentionPolicyV18Flux": "",
+        "org": "HA",
+        "bucket": "zigbee2mqtt",
+        "x": 1560,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a22f1fd8b396d8d8",
+        "type": "change",
+        "z": "caf31ad42af82798",
+        "name": "Door Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"contact\": msg.payload.contact\t} ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "a92babf8e7cc21f1"
+            ]
+        ]
+    },
+    {
+        "id": "03b8edcb409e5c43",
+        "type": "function",
+        "z": "caf31ad42af82798",
+        "name": "Door State",
+        "func": "msg.topic = \"InfluxData\";\nvar timestamp = global.get('timestamp')\nvar doorSensor;\nif (msg.payload.contact === false) {\n    doorSensor = 1;\n} else {}\n\nmsg.payload = {\n    \"DoorIsOpen\": doorSensor,\n    \"timestamp\": timestamp\n};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 220,
+        "wires": [
+            [
+                "3c26e48185c89f7a",
+                "b69092e2c3cbc5bb"
+            ]
+        ]
+    },
+    {
+        "id": "a92babf8e7cc21f1",
+        "type": "switch",
+        "z": "caf31ad42af82798",
+        "name": "Door Filter",
+        "property": "payload.contact",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "03b8edcb409e5c43"
+            ]
+        ]
+    },
+    {
+        "id": "2df832381f4dbff7",
+        "type": "change",
+        "z": "caf31ad42af82798",
+        "name": "Motion Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"occupancy\": msg.payload.occupancy\t} ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "5686848b4563d844"
+            ]
+        ]
+    },
+    {
+        "id": "5686848b4563d844",
+        "type": "switch",
+        "z": "caf31ad42af82798",
+        "name": "Motion Filter",
+        "property": "payload.occupancy",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "7373040acbe7951e"
+            ]
+        ]
+    },
+    {
+        "id": "7373040acbe7951e",
+        "type": "function",
+        "z": "caf31ad42af82798",
+        "name": "Door State",
+        "func": "msg.topic = \"InfluxMotionData\";\nvar timestamp = global.get('timestamp')\nvar motionSensor;\n\nif (msg.payload.occupancy === true) {\n    motionSensor = 1;\n} else {}\n\nmsg.payload = {\n    \"HumanIsDetected\": motionSensor,\n    \"timestamp\": timestamp\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 340,
+        "wires": [
+            [
+                "178423e087e0bdc3",
+                "f99cab1e05778e71"
+            ]
+        ]
+    },
+    {
+        "id": "f99cab1e05778e71",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b69092e2c3cbc5bb",
+        "type": "debug",
+        "z": "caf31ad42af82798",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f7314d84dde79130",
+        "type": "function",
+        "z": "5fb795b5171e3e4c",
+        "name": "Convert to Base64",
+        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 160,
+        "wires": [
+            [
+                "fdcc335d.3a1f7"
+            ]
+        ]
+    },
+    {
+        "id": "2dffcc4749030dab",
+        "type": "postgresql",
+        "z": "5fb795b5171e3e4c",
+        "name": "Base64",
+        "query": "INSERT INTO image(image_data,timestamp)\n VALUES($1,$2)",
+        "postgreSQLConfig": "55cbc7b372811f6b",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1180,
+        "y": 160,
+        "wires": [
+            [
+                "293f6e2f903d873e"
+            ]
+        ]
+    },
+    {
+        "id": "fdcc335d.3a1f7",
+        "type": "function",
+        "z": "5fb795b5171e3e4c",
+        "name": "Generate Base64",
+        "func": "var currentTime = new Date(); // 获取当前时间\nvar isoTimeString = currentTime.toISOString(); // 将当前时间转换为 ISO 格式\nvar image_data = msg.payload;\nmsg.params = [image_data, isoTimeString];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 160,
+        "wires": [
+            [
+                "2d98b46518a459b1",
+                "2dffcc4749030dab"
+            ]
+        ]
+    },
+    {
+        "id": "293f6e2f903d873e",
+        "type": "debug",
+        "z": "5fb795b5171e3e4c",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6d8387cc5bc1c1e2",
+        "type": "inject",
+        "z": "5fb795b5171e3e4c",
+        "name": "Base64Test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "a03b698685545fbd"
+            ]
+        ]
+    },
+    {
+        "id": "a03b698685545fbd",
+        "type": "http request",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.50.146:8123/local/snapshot.jpg",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 440,
+        "y": 160,
+        "wires": [
+            [
+                "f7314d84dde79130"
+            ]
+        ]
+    },
+    {
+        "id": "9868890d19becfa0",
+        "type": "inject",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "abc79525ba5eea2d"
+            ]
+        ]
+    },
+    {
+        "id": "abc79525ba5eea2d",
+        "type": "postgresql",
+        "z": "5fb795b5171e3e4c",
+        "name": "createTabel",
+        "query": "CREATE TABLE image (  \n    id SERIAL PRIMARY KEY,  \n    timestamp TIMESTAMP NOT NULL,  \n    image_data TEXT NOT NULL  \n);",
+        "postgreSQLConfig": "55cbc7b372811f6b",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 450,
+        "y": 100,
+        "wires": [
+            [
+                "adb7ca5079a9f108"
+            ]
+        ]
+    },
+    {
+        "id": "adb7ca5079a9f108",
+        "type": "debug",
+        "z": "5fb795b5171e3e4c",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2d98b46518a459b1",
+        "type": "debug",
+        "z": "5fb795b5171e3e4c",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1b8e994313702974",
+        "type": "mqtt in",
+        "z": "5fb795b5171e3e4c",
+        "name": "MotionSensor",
+        "topic": "zigbee2mqtt/MotionSensor",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "519ed97f.26f3a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "5c1066194b11420d"
+            ]
+        ]
+    },
+    {
+        "id": "5c1066194b11420d",
+        "type": "delay",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 320,
+        "wires": [
+            [
+                "9b0822915b1244cf"
+            ]
+        ]
+    },
+    {
+        "id": "8b8f219d179b4340",
+        "type": "http request",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.50.146:8123/local/snapshot.jpg",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1220,
+        "y": 320,
+        "wires": [
+            [
+                "d0747cd38692390f"
+            ]
+        ]
+    },
+    {
+        "id": "d0747cd38692390f",
+        "type": "function",
+        "z": "5fb795b5171e3e4c",
+        "name": "Convert to Base64",
+        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 320,
+        "wires": [
+            [
+                "d54198ce228fcb99"
+            ]
+        ]
+    },
+    {
+        "id": "d54198ce228fcb99",
+        "type": "function",
+        "z": "5fb795b5171e3e4c",
+        "name": "Generate Base64",
+        "func": "var currentTime = new Date(); // 获取当前时间\nvar isoTimeString = currentTime.toISOString(); // 将当前时间转换为 ISO 格式\nvar image_data = msg.payload;\nmsg.params = [image_data, isoTimeString];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 320,
+        "wires": [
+            [
+                "61e406357742217a"
+            ]
+        ]
+    },
+    {
+        "id": "61e406357742217a",
+        "type": "postgresql",
+        "z": "5fb795b5171e3e4c",
+        "name": "Base64",
+        "query": "INSERT INTO image(image_data,timestamp)\n VALUES($1,$2)",
+        "postgreSQLConfig": "55cbc7b372811f6b",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1880,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b9ac4054213462a",
+        "type": "delay",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 320,
+        "wires": [
+            [
+                "8b8f219d179b4340"
+            ]
+        ]
+    },
+    {
+        "id": "5b8c36ecb4a31566",
+        "type": "debug",
+        "z": "5fb795b5171e3e4c",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9b0822915b1244cf",
+        "type": "change",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 320,
+        "wires": [
+            [
+                "26fabf68345f02e3"
+            ]
+        ]
+    },
+    {
+        "id": "26fabf68345f02e3",
+        "type": "api-call-service",
+        "z": "5fb795b5171e3e4c",
+        "name": "Snapshot Latest",
+        "server": "f60a00aaca0568d6",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "camera",
+        "service": "snapshot",
+        "areaId": [
+            "colaps"
+        ],
+        "deviceId": [
+            "20ae74ef5363b2ddd4a9999c29c8abb0"
+        ],
+        "entityId": [
+            "camera.camera1"
+        ],
+        "data": "{\"filename\":\"/config/www/snapshot.jpg\"}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 820,
+        "y": 320,
+        "wires": [
+            [
+                "5b8c36ecb4a31566",
+                "9b9ac4054213462a"
+            ]
+        ]
+    },
+    {
+        "id": "ae48eda2df6b3d7f",
+        "type": "inject",
+        "z": "5fb795b5171e3e4c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 500,
+        "wires": [
+            [
+                "28856402c678f1bb"
+            ]
+        ]
+    },
+    {
+        "id": "28856402c678f1bb",
+        "type": "postgresql",
+        "z": "5fb795b5171e3e4c",
+        "name": "Delete Data",
+        "query": "DROP TABLE public.image;\n",
+        "postgreSQLConfig": "55cbc7b372811f6b",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "324b7f1c9f9e4148"
+            ]
+        ]
+    },
+    {
+        "id": "324b7f1c9f9e4148",
+        "type": "debug",
+        "z": "5fb795b5171e3e4c",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "db527958ef374364",
+        "type": "function",
+        "z": "8a812e15a3be21e2",
+        "name": "function 2",
+        "func": "let now = new Date();\nlet gmtPlus2Time = new Date(now.toLocaleString(\"en-US\", { timeZone: \"Europe/Berlin\" }));\nlet year = gmtPlus2Time.getFullYear();\nlet month = String(gmtPlus2Time.getMonth() + 1).padStart(2, '0');\nlet day = String(gmtPlus2Time.getDate()).padStart(2, '0');\nlet hour = String(gmtPlus2Time.getHours()).padStart(2, '0');\nlet minutes = String(gmtPlus2Time.getMinutes()).padStart(2, '0');\nlet seconds = String(gmtPlus2Time.getSeconds()).padStart(2, '0');\n\nlet formattedDate = `${year}-${month}-${day}`;\nlet timeString = `${hour}-${minutes}-${seconds}`;\n\nlet file_name_jpg = `/config/www/${formattedDate}/snapshot_${timeString}.jpg`;\n\nmsg.payload = {\n    data: {\n        filename: file_name_jpg\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 320,
+        "wires": [
+            [
+                "c652046a6bf96ff6",
+                "fd074c7ac21903d0"
+            ]
+        ]
+    },
+    {
+        "id": "d6a462cab7c7cc6b",
+        "type": "inject",
+        "z": "8a812e15a3be21e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [
+                "db527958ef374364"
+            ]
+        ]
+    },
+    {
+        "id": "c652046a6bf96ff6",
+        "type": "debug",
+        "z": "8a812e15a3be21e2",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fd074c7ac21903d0",
+        "type": "api-call-service",
+        "z": "8a812e15a3be21e2",
+        "name": "",
+        "server": "f60a00aaca0568d6",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "camera",
+        "service": "snapshot",
+        "areaId": [
+            "colaps"
+        ],
+        "deviceId": [
+            "20ae74ef5363b2ddd4a9999c29c8abb0"
+        ],
+        "entityId": [
+            "camera.camera1"
+        ],
+        "data": "{  \t    \"filename\": \"file_name_jpg\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "first",
+        "x": 850,
+        "y": 400,
+        "wires": [
+            [
+                "2787dd6e8682c261"
+            ]
+        ]
+    },
+    {
+        "id": "2787dd6e8682c261",
+        "type": "debug",
+        "z": "8a812e15a3be21e2",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8c57a82dfb899500",
+        "type": "mqtt in",
+        "z": "8a812e15a3be21e2",
+        "name": "DoorSensor",
+        "topic": "zigbee2mqtt/DoorSensor",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "519ed97f.26f3a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "06663b86d1481930"
+            ]
+        ]
+    },
+    {
+        "id": "06663b86d1481930",
+        "type": "change",
+        "z": "8a812e15a3be21e2",
+        "name": "Status",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"contact\": msg.payload.contact\t} ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "b2b972a36cfa70b5"
+            ]
+        ]
+    },
+    {
+        "id": "61b029e8e5a05074",
+        "type": "function",
+        "z": "8a812e15a3be21e2",
+        "name": "Door State",
+        "func": "msg.topic = \"InfluxData\";\nvar timestamp = global.get('timestamp')\nvar Sensor = msg.payload.DoorIsOpen;\nif (msg.payload.contact === false) {\n    msg.payload.DoorIsOpen = 1;\n} else {}\n\nvar Sensor = msg.payload.DoorIsOpen;\nmsg.payload = {\n    \"DoorIsOpen\": Sensor,\n    \"timestamp\": timestamp\n};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 740,
+        "wires": [
+            [
+                "0359c87481e2bfc1",
+                "a9da20f9016c532a"
+            ]
+        ]
+    },
+    {
+        "id": "0359c87481e2bfc1",
+        "type": "debug",
+        "z": "8a812e15a3be21e2",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "dae69fcc13c8889c",
+        "type": "debug",
+        "z": "8a812e15a3be21e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b2b972a36cfa70b5",
+        "type": "switch",
+        "z": "8a812e15a3be21e2",
+        "name": "",
+        "property": "payload.contact",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "dae69fcc13c8889c",
+                "61b029e8e5a05074"
+            ]
+        ]
+    },
+    {
+        "id": "a9da20f9016c532a",
+        "type": "influxdb out",
+        "z": "8a812e15a3be21e2",
+        "influxdb": "6f31a8e94c09d7f2",
+        "name": "",
+        "measurement": "sensorStates",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ns",
+        "retentionPolicyV18Flux": "",
+        "org": "HA",
+        "bucket": "zigbee2mqtt",
+        "x": 1220,
+        "y": 740,
+        "wires": []
+    }
+]

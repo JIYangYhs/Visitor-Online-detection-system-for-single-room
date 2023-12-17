@@ -1,0 +1,89 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+#Add container user interface to navigation menu
+panel_iframe:
+  portainer: 
+    title: "Portainer"
+    url: "http://192.168.2.142:9000"
+    icon: mdi:docker
+    require_admin: true
+  grafana: 
+    title: "Grafana"
+    url: "http://192.168.2.142:3000"
+    icon: mdi:chart-timeline
+    require_admin: true
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+      - type: disk_free
+        arg: /
+      - type: memory_use_percent
+      - type: memory_free
+      - type: processor_use
+      - type: processor_temperature
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+
+influxdb:
+  api_version: 2
+  ssl: false
+  host: localhost
+  port: 8087
+  token: my-super-secret-auth-token
+  organization: HA
+  bucket: homeassistant
+  tags:
+    source: HA
+  tags_attributes:
+    - friendly_name
+  default_measurement: units
+  exclude:
+    entities:
+      - zone.home
+    domains:
+      - persistent_notification
+      - person
+       - binary_sensor
+      - sun
+  include:
+    domains:
+      - sensor
+    entities:
+      - sensor.processor_use
+      - sensor.processor_temperature
+      - sensor.memory_free
+      - sensor.memory_use_percent
+      - sensor.disk_use_percent
+      - sensor.disk_free
+camera:
+  - platform: local_file
+    file_path: /config/www/local_file_camera/snapshot.jpg
+
+shell_command:
+   delete_file: /bin/bash /config/autoDelete.sh
+   copy_file: /bin/bash /config/copy.sh
+
+# Example configuration.yaml entry
+mqtt:
+  - camera:
+      topic: zanzito/shared_locations/my-device
