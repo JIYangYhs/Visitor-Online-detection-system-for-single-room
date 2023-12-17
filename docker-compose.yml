@@ -176,3 +176,17 @@ services:
     volumes:
     - ./volumes/pgadmin4:/pgadmin4
 
+version: "2"
+services:
+  motioneye:
+    image: ccrisan/motioneye:master-armhf
+    container_name: motioneye
+    volumes:
+      - /etc/localtime:/etc/localtime:ro #Timezone Config / Do Not Change
+      - /etc/motioneye:/etc/motioneye #Config Storage
+      - /var/lib/motioneye:/var/lib/motioneye  #File Storage
+    devices:
+      - /dev/video0
+    ports:
+      - 8765:8765
+    restart: unless-stopped
